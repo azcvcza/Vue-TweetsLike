@@ -92,7 +92,7 @@
           </div>
         </article>
         <div class="control has-icons-left has-icons-right">
-        <input class="input is-small" placeholder="Tweet your reply..." />
+        <input class="input is-small" v-bind:placeholder="'Hi !'+tweet.name" />
         <span class="icon is-small is-left">
           <i class="fas fa-envelope"></i>
         </span>
