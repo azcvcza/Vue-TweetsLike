@@ -2,14 +2,17 @@
 	<div id="app">
 		<img src="./assets/logo.png">
 		<HelloWorld/>
-		<div class="column">
-      <tweet-component v-for="tweet in tweets" :tweet="tweet"></tweet-component>
-    </div>
+		<div class="coloumns">
+			<div class="column">
+				<tweet-component v-for="tweet in tweets" :tweet="tweet"></tweet-component>
+			</div>
+		</div>
 	</div>
 </template>
 
 <script>
-  import Vue from 'vue';
+  import Vue from "vue";
+  import "../node_modules/bulma/css/bulma.css"
 	import HelloWorld from "./components/HelloWorld";
 	const tweets = [
 		{
@@ -36,50 +39,49 @@
 			tweet: "Beauty in the struggle, ugliness in the success.",
 			likes: 18
 		}
-  ];
-  Vue.component('tweet-component',{
-    template:`<div class="tweet">
-			<div class="box">
-				<article class="media">
-					<div class="media-left">
-						<figure class="image is-64x64">
-							<img src="tweet.img" alt="Image">
-						</figure>
-					</div>
-					<div class="media-content">
-						<div class="content">
-							<p>
-								<strong>{{tweet.name}}</strong>
-								<br>
-								{{tweet.tweet}}
-							</p>
+	];
+	Vue.component("tweet-component", {
+		template: `<div class="tweet">
+				<div class="box">
+					<article class="media">
+						<div class="media-left">
+							<figure class="image is-64x64">
+								<img :src="tweet.img" alt="Image">
+							</figure>
 						</div>
-					</div>
-					<div class="level-left">
-						<a class="level-item">
-							<span class="icon is-small">
-								<i class="fas fa-heart"></i>
-							</span>
-							<span class="likes">{{tweet.likes}}</span>
-						</a>
-					</div>
-				</article>
-			</div>
-    </div>`,
-    props:{
-      tweet:Object
-    }
-  })
+						<div class="media-content">
+							<div class="content">
+								<p>
+									<strong>{{tweet.name}}</strong>
+									<br>
+									{{tweet.tweet}}
+								</p>
+							</div>
+						</div>
+						<div class="level-left">
+							<a class="level-item">
+								<span class="icon is-small">
+									<i class="fas fa-heart"></i>
+								</span>
+								<span class="likes">{{tweet.likes}}</span>
+							</a>
+						</div>
+					</article>
+				</div>
+	    </div>`,
+		props: {
+			tweet: Object
+		}
+	});
 	export default {
 		name: "App",
 		components: {
-      HelloWorld,
-      
+			HelloWorld
 		},
 		data: () => {
 			return {
-        tweets:tweets,
-      };
+				tweets: tweets
+			};
 		}
 	};
 </script>
