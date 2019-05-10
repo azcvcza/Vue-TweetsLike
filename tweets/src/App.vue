@@ -5,7 +5,9 @@
 		<div class="columns">
 			<div class="column">
         <button class="is-primary button" @click="reverse">Reverse</button>
+        <transition-group name="tweets" tag="div">
 				<tweet-component v-for="tweet in tweets" :tweet="tweet" :key="tweet.id"></tweet-component>
+        </transition-group>
 			</div>
 		</div>
 	</div>
@@ -132,5 +134,8 @@
 	color: #2c3e50;
   margin-left:200px;
   margin-right:200px;
+}
+.tweets-move{
+  transition:transform 1s;
 }
 </style>
