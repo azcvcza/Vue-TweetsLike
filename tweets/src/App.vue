@@ -23,7 +23,7 @@
 			id: 1,
 			name: "James",
 			handle: "@jokerjames",
-			img: "/static/matthew.png",
+			img: "./static/img/matthew.png",
 			tweet: "If you don't succeed, dust yourself off and try again.",
 			likes: 10
 		},
@@ -31,7 +31,7 @@
 			id: 2,
 			name: "Fatima",
 			handle: "@fantasticfatima",
-			img: "/static/molly.png",
+			img: "./static/img/molly.png",
 			tweet: "Better late than never but never late is better.",
 			likes: 12
 		},
@@ -39,7 +39,7 @@
 			id: 3,
 			name: "Xin",
 			handle: "@xeroxin",
-			img: "/static/elyse.png",
+			img: "./static/img/elyse.png",
 			tweet: "Beauty in the struggle, ugliness in the success.",
 			likes: 18
     },
@@ -47,7 +47,7 @@
 			id: 4,
 			name: "James12",
       handle: "@jokerjames",
-      img: "/static/molly.png",
+      img: "./static/img/molly.png",
 			tweet: "If you don't succeed, dust yourself off and try again.",
 			likes: 14
 		},
@@ -55,7 +55,7 @@
 			id: 5,
 			name: "Fatima21",
       handle: "@fantasticfatima",
-      img: "/static/elyse.png",
+      img: "./static/img/elyse.png",
 			tweet: "Better late than never but never late is better.",
 			likes: 15
 		},
@@ -63,7 +63,7 @@
 			id: 6,
 			name: "Xin33",
 			handle: "@xeroxin",
-			img: "/static/matthew.png",
+			img: "./static/img/matthew.png",
 			tweet: "Beauty in the struggle, ugliness in the success.",
 			likes: 16
 		}
